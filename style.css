@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+body{
+    text-align: center;
+    font-family: 'Patrick Hand', cursive;
+}
+
+.cellContainer{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 225px;
+    line-height: 75px;
+    margin: auto;
+    text-align: center;
+}
+.cell{
+    width: 75px;
+    height: 75px;
+    border: 2px solid black;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.cellContainer :first-child,
+.cellContainer :nth-child(2),
+.cellContainer :nth-child(3){
+    border-top: none;
+}
+
+.cellContainer :nth-child(3n + 1){
+    border-left: none;
+}
+
+
+.cellContainer :nth-child(3n + 3){
+    border-right: none;
+}
+
+.cellContainer :last-child,
+.cellContainer :nth-child(7),
+.cellContainer :nth-child(8){
+    border-bottom: none;
+}
+
+#resetBtn{
+    width: 130px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    background: #39e75f;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: all 0.2s
+}
+
+#resetBtn:hover{
+    background: #00c04b
+  }
+
+#resetBtn:active{
+    width: 125px;
+    height:35px;
+  }
